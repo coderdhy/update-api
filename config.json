@@ -1,41 +1,74 @@
-{
-    "error": {
-        "code": 404,
-        "msg": "参数错误！",
-        "data": ""
+[
+    {
+        "app":"student",
+        "baseAppVersion": [
+            "2.5.0",
+            "2.5.1",
+            "2.6.0"
+        ],
+        "baseOs": [
+            "darwin"
+        ],
+        "baseChannel": [
+            "360"
+        ],
+        "baseOsversion": [
+            "16.",
+            "17."
+        ],
+        "targetAppVersion": "2.6.2",
+        "targetAppUrl": "http://localhost/files/update_mac.zip",
+        "targetAppUrlBackUp": "2.6.2.url.backup",
+        "targetNotes": "升级给宝石哦",
+        "targetPubDate": "217-08-08",
+        "targetStrategy": "promote",
+        "whiteUserList": [
+            12
+        ],
+        "isAllPush": true,
+        "blackUserList": [
+            22
+        ],
+        "whiteUserEndNumberList": [
+            3,
+            4
+        ]
     },
-    "winold": {
-        "code": 204,
-        "msg": "当前版本2.2.0在10.1-null没有更新版本啦！",
-        "data": ""
-    },
-    "winnew": {
-        "code": 200,
-        "msg": "OK",
-        "data": {
-            "url": "http://localhost/files/update.zip",
-            "urlBack": "2.6.2.url.backup",
-            "name": "2.6.2",
-            "notes": "升级给宝石哦",
-            "pubDate": "217-08-08",
-            "strategy": "promote"
-        }
-    },
-    "macold": {
-        "code": 204,
-        "msg": "当前版本2.2.0在10.1-null没有更新版本啦！",
-        "data": ""
-    },
-    "macnew": {
-        "code": 200,
-        "msg": "OK",
-        "data": {
-            "url": "http://download.agora.io/sdk/release/Agora_Native_SDK_for_Mac_v2_1_0_FULL.zip",
-            "urlBack": "2.6.2.url.backup",
-            "name": "2.6.2",
-            "notes": "升级给宝石哦",
-            "pubDate": "217-08-08",
-            "strategy": "promote"
-        }
+    {
+        "app":"student",
+        "baseAppVersion": [
+            "2.5.0",
+            "2.5.1",
+            "2.6.0"
+        ],
+        "baseOs": [
+            "win32"
+        ],
+        "baseChannel": [
+            "360"
+        ],
+        "baseOsversion": [
+            "10.",
+            "6.",
+            "7.",
+            "8."
+        ],
+        "targetAppVersion": "2.6.2",
+        "targetAppUrl": "http://localhost/files/update.zip",
+        "targetAppUrlBackUp": "2.6.2.url.backup",
+        "targetNotes": "升级给宝石哦",
+        "targetPubDate": "217-08-08",
+        "targetStrategy": "promote",
+        "whiteUserList": [
+            12
+        ],
+        "isAllPush": true,
+        "blackUserList": [
+            22
+        ],
+        "whiteUserEndNumberList": [
+            3,
+            4
+        ]
     }
-}
+]
