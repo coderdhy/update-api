@@ -26,9 +26,10 @@ check.check = function(req, res) {
         array = element.baseOsversion
         if(array.length > 0) {
             for(let j=0; j<array.length; j++) {
-                if (0 < params.osversion.indexOf(array[j]))
+                if (0 <= params.osversion.indexOf(array[j]))
                 {
                     bfind = true
+                    break
                 }
             }
             if(!bfind) {

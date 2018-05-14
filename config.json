@@ -4,19 +4,21 @@
         "baseAppVersion": [
             "2.5.0",
             "2.5.1",
-            "2.6.0"
+            "2.6.0",
+            "2.7.0"
         ],
         "baseOs": [
             "darwin"
         ],
         "baseChannel": [
-            "360"
+            "360",
+            "guanwang"
         ],
         "baseOsversion": [
             "16.",
             "17."
         ],
-        "targetAppVersion": "2.6.2",
+        "targetAppVersion": "2.7.1",
         "targetAppUrl": "http://localhost/files/update_mac.zip",
         "targetAppUrlBackUp": "2.6.2.url.backup",
         "targetNotes": "升级给宝石哦",
@@ -35,17 +37,20 @@
         ]
     },
     {
-        "app":"student",
+        "app":"international",
         "baseAppVersion": [
             "2.5.0",
             "2.5.1",
-            "2.6.0"
+            "2.6.0",
+            "2.7.0",
+            "1.2.1"
         ],
         "baseOs": [
             "win32"
         ],
         "baseChannel": [
-            "360"
+            "360",
+            "guanwang"
         ],
         "baseOsversion": [
             "10.",
@@ -53,8 +58,8 @@
             "7.",
             "8."
         ],
-        "targetAppVersion": "2.6.2",
-        "targetAppUrl": "http://localhost/files/update.zip",
+        "targetAppVersion": "2.7.1",
+        "targetAppUrl": "https://localhost/files/update.zip",
         "targetAppUrlBackUp": "2.6.2.url.backup",
         "targetNotes": "升级给宝石哦",
         "targetPubDate": "217-08-08",

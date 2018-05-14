@@ -7,6 +7,6 @@ apiRoutes.get('/', function(req, res) {
   res.json({ message: 'Welcome to the coolest API on earth!' });
 });
 
-apiRoutes.get('/check', check.check);
+apiRoutes.get('/pc/app/service/getNewAppVersion', check.check);
 
 module.exports = apiRoutes
