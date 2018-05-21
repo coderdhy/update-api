@@ -1,4 +1,3 @@
-//var morgan = require('morgan');
 var http = require('http');
 var https = require('https');
 var express = require('express');
@@ -18,8 +17,6 @@ app.port = process.env.PORT || 7080; // 设置启动端口
 app.sslport = process.env.SSLPORT || 7081; // 设置启动端口
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-//app.use(morgan('dev'));// 使用 morgan 将请求日志打印到控制台
-
 
 
 app.get('/', function(req, res) {
