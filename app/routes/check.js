@@ -11,7 +11,7 @@ check.check = function(req, res) {
             continue
         }
         var array = element.baseAppVersion
-        if(array.length > 0 && array.indexOf(params.version) < 0 ) {
+        if(array.length > 0 && array.indexOf(params.vn) < 0 ) {
             continue
         }
         array = element.baseOs
@@ -19,14 +19,14 @@ check.check = function(req, res) {
             continue
         }
         array = element.baseChannel
-        if(array.length > 0 && array.indexOf(params.channel) < 0) {
+        if(array.length > 0 && array.indexOf(params.tn) < 0) {
             continue
         }
         let bfind = false
         array = element.baseOsversion
         if(array.length > 0) {
             for(let j=0; j<array.length; j++) {
-                if (0 <= params.osversion.indexOf(array[j]))
+                if (0 <= params.ovn.indexOf(array[j]))
                 {
                     bfind = true
                     break
