@@ -37,9 +37,9 @@
         ]
     },
     {
-        "app":"international",
+        "app":"pc_student",
         "baseAppVersion": [
-	    "1.0.0",
+	        "1.0.0",
             "2.5.0",
             "2.5.1",
             "2.6.0",
@@ -60,11 +60,11 @@
             "8."
         ],
         "targetAppVersion": "2.7.1",
-        "targetAppUrl": "http://tuziyuedu.com:8080/VIPKID_WIN32_1.0.0.zip",
+        "targetAppUrl": "http://tuziyuedu.com:8080/updates.zip",
         "targetAppUrlBackUp": "2.6.2.url.backup",
         "targetNotes": "升级给宝石哦",
         "targetPubDate": "217-08-08",
-        "targetStrategy": "promote",
+        "targetStrategy": "promot",
         "whiteUserList": [
             12
         ],
