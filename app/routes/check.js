@@ -37,8 +37,8 @@ check.check = function(req, res) {
             }
         }
         res.json({
-            "code": 200,
-            "msg": "OK",
+            "code": 0,
+            "message": "OK",
             "data": {
                 "url": element.targetAppUrl,
                 "urlBack": element.targetAppUrlBackUp,
@@ -52,7 +52,7 @@ check.check = function(req, res) {
     }
     res.json({
         "code": 204,
-        "msg": "没有更新版本啦！",
+        "message": "没有更新版本啦！",
         "data": ""
     })
 }
