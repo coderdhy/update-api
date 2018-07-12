@@ -23,13 +23,23 @@ var createFolder = function(dirname) {
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        var folder = req.query.path
-        var dst = uploadFolder
-        if(folder) {
-            dst = path.join(uploadFolder, folder);
-            createFolder(dst)
+        var folder = path.join(updateFolder, req.query.type);
+        if(!fs.existsSync(folder)) {
+            path.mkdirSync(folder);
         }
-	    console.log(dst);
+        if(req.query.type === 'release') {
+            folder = path.join(folder, req.query.version);
+        } else {
+            folder = path.join(folder, 'build_'+req.query.number);
+        }
+        if(!fs.existsSync(folder)) {
+            path.mkdirSync(folder);
+        }
+        folder = path.join(folder, req.query.os);
+        if(!fs.existsSync(folder)) {
+            path.mkdirSync(folder);
+        }
+        
         cb(null, dst);
     },
     filename: function (req, file, cb) {
