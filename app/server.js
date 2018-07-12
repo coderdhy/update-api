@@ -18,7 +18,6 @@ app.sslport = process.env.SSLPORT || 7081; // 设置启动端口
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-
 app.get('/', function(req, res) {
     if(req.protocol === 'https') {
         res.send('Hello! The API is at https://localhost:' + app.sslport + '/api');
