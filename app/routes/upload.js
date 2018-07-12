@@ -4,7 +4,7 @@ var multer = require('multer');
 var fileconfig = require('../../fileconfig')
 var uploadFolder = './upload'
 
-if(process.env.NODE_ENV === 'product') {
+if(process.env.NODE_ENV === 'production') {
     uploadFolder = fileconfig.dist
 }
 
