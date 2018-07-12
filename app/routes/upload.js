@@ -40,7 +40,7 @@ var storage = multer.diskStorage({
             fs.mkdirSync(folder);
         }
         
-        cb(null, dst);
+        cb(null, folder);
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname);
