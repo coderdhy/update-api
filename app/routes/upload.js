@@ -25,7 +25,7 @@ var storage = multer.diskStorage({
     destination: function (req, file, cb) {
         var folder = path.join(uploadFolder, req.query.type);
         if(!fs.existsSync(folder)) {
-            path.mkdirSync(folder);
+            fs.mkdirSync(folder);
         }
         if(req.query.type === 'release') {
             folder = path.join(folder, req.query.version);
@@ -33,11 +33,11 @@ var storage = multer.diskStorage({
             folder = path.join(folder, 'build_'+req.query.number);
         }
         if(!fs.existsSync(folder)) {
-            path.mkdirSync(folder);
+            fs.mkdirSync(folder);
         }
         folder = path.join(folder, req.query.os);
         if(!fs.existsSync(folder)) {
-            path.mkdirSync(folder);
+            fs.mkdirSync(folder);
         }
         
         cb(null, dst);
