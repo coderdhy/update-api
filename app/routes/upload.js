@@ -23,7 +23,7 @@ var createFolder = function(dirname) {
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        var folder = path.join(updateFolder, req.query.type);
+        var folder = path.join(uploadFolder, req.query.type);
         if(!fs.existsSync(folder)) {
             path.mkdirSync(folder);
         }
