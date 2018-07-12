@@ -7,7 +7,7 @@ var uploadFolder = './upload'
 if(process.env.NODE_ENV === 'production') {
     uploadFolder = fileconfig.dist
 }
-
+console.log(process.env.NODE_ENV);
 var createFolder = function(dirpath) {
     try {
         if (!fs.existsSync(dirpath)) {
@@ -41,6 +41,7 @@ var storage = multer.diskStorage({
             dst = path.join(uploadFolder, folder);
             createFolder(dst)
         }
+	console.log(dst);
         cb(null, dst);
     },
     filename: function (req, file, cb) {
