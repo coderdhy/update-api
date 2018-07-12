@@ -1,38 +1,25 @@
 var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
-var fileconfig = require('../../fileconfig')
-var uploadFolder = fileconfig.dist
+var fileconfig = require('../../fileconfig');
+var uploadFolder = './upload';
 
-if(process.env.NODE_ENV === 'dev') {
-    uploadFolder = './upload'
+if(process.env.NODE_ENV.indexOf('production') >= 0) {
+    uploadFolder = fileconfig.dist;
 }
 
-var createFolder = function(dirpath) {
-    try {
-        if (!fs.existsSync(dirpath)) {
-            let pathtmp;
-            dirpath.split(/[/\\]/).forEach(function (dirname) {  //这里指用/ 或\ 都可以分隔目录  如  linux的/usr/local/services   和windows的 d:\temp\aaaa
-                if (pathtmp) {
-                    pathtmp = path.join(pathtmp, dirname);
-                }
-                else {
-                    pathtmp = dirname;
-                }
-                console.log(dirname, "     ", pathtmp);
-                if (!fs.existsSync(pathtmp)) {
-                    if (!fs.mkdirSync(pathtmp)) {
-                        return false;
-                    }
-                }
-            });
-        }
+console.log('env', process.env.NODE_ENV)
+var createFolder = function(dirname) {
+    console.log(dirname)
+    if (fs.existsSync(dirname)) {
         return true;
-    } catch (e) {
-        console.error("create director fail! path=" + dirpath + " errorMsg:" + e);
-        return false;
+    } 
+    if (createFolder(path.dirname(dirname))) {
+        fs.mkdirSync(dirname);
+        return true;
     }
-};
+    return true;
+}
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -42,7 +29,7 @@ var storage = multer.diskStorage({
             dst = path.join(uploadFolder, folder);
             createFolder(dst)
         }
-	console.log(dst);
+	    console.log(dst);
         cb(null, dst);
     },
     filename: function (req, file, cb) {
