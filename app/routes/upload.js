@@ -19,6 +19,7 @@ var createFolder = function(dirpath) {
                 else {
                     pathtmp = dirname;
                 }
+                console.log(dirname, "     ", pathtmp);
                 if (!fs.existsSync(pathtmp)) {
                     if (!fs.mkdirSync(pathtmp)) {
                         return false;
