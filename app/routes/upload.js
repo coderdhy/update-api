@@ -28,7 +28,7 @@ var createFolder = function(dirpath) {
         }
         return true;
     } catch (e) {
-        log.error("create director fail! path=" + dirpath + " errorMsg:" + e);
+        console.error("create director fail! path=" + dirpath + " errorMsg:" + e);
         return false;
     }
 };
