@@ -2,12 +2,12 @@ var fs = require('fs');
 var path = require('path');
 var multer = require('multer');
 var fileconfig = require('../../fileconfig')
-var uploadFolder = './upload'
+var uploadFolder = fileconfig.dist
 
-if(process.env.NODE_ENV === 'production') {
-    uploadFolder = fileconfig.dist
+if(process.env.NODE_ENV === 'dev') {
+    uploadFolder = './upload'
 }
-console.log(process.env.NODE_ENV);
+
 var createFolder = function(dirpath) {
     try {
         if (!fs.existsSync(dirpath)) {
